@@ -60,7 +60,7 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | yuvaraj";
-            $("#favicon").attr("href", "assets/images/fav.png");
+            $("#favicon").attr("href", "assets/images/man.png");
         }
         else {
             document.title = "Come Back To Portfolio";
