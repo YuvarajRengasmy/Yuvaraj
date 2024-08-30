@@ -91,7 +91,7 @@
             <p><span> place : </span> Chennai, India - 614616</p>
           </div>
             <div class="box">
-              <p><span> age: </span> 24</p>
+              <p><span> age: </span> <i id="age"></i></p>
               <p><span> phone : </span> +91 882-566-9408</p>
             </div>
             
@@ -438,5 +438,15 @@
 
 <script src="./assets/js/script.js"></script>
 
+<script>
+  const tick = () => {
+    const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
+    const birthTime = new Date('1999-05-05T09:24:00');
+    const age = ((Date.now() - birthTime) / divisor).toFixed(11);
+    document.getElementById('age').textContent = age;
+  };
+
+  setInterval(tick, 25);
+</script>
 </body>
 </html>
